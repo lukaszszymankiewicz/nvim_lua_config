@@ -1,0 +1,26 @@
+vim.keymap.set('n', '<leader><leader>', ':noh<CR>')
+
+vim.keymap.set('n', '<c-z>', '<nop>')  
+vim.keymap.set('n', 'n', 'nzzzv') 
+vim.keymap.set('n', 'N', 'Nzzzv')
+vim.keymap.set('n', 'Y', 'y$')
+vim.keymap.set('n', '<leader>j', ':m .+1<CR>==')
+vim.keymap.set('n', '<leader>k', ':m .-2<CR>==')
+vim.keymap.set("n", "<C-z>", "mz$p'z")
+vim.keymap.set('n', '<leader>b', 'obreakpoint()<Esc><CR>==')
+vim.keymap.set('n', '<leader>h', ':tabprevious<CR>')
+vim.keymap.set('n', '<leader>l', ':tabnext<CR>')
+vim.keymap.set('n', '<leader><leader>', ':noh<CR>')
+vim.keymap.set('n', '<F6>', ':vsplit <bar> terminal python %<CR>')
+vim.keymap.set('n', '<C-s>', ':update<CR>')
+
+vim.keymap.set('n', '<leader>y',  ':let @a="poetry run pytest " . expand("%") . "::" <CR> 0/test//gc <CR> h"Ayt( :let @"=@a <CR> :noh<CR>b')
+
+vim.keymap.set('i', '<C-c>', '<ESC>')
+vim.keymap.set('i', '<C-b>', 'breakpoint()')
+vim.keymap.set("i", "<C-z>", "<Esc>mz$p'z")
+
+vim.keymap.set('n', '<leader>[', vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic message" })
+vim.keymap.set('n', '<leader>]', vim.diagnostic.goto_next, { desc = "Go to next diagnostic message" })
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
+vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
