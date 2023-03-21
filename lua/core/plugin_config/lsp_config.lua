@@ -49,6 +49,7 @@ mason_lspconfig.setup {
 mason_lspconfig.setup_handlers {
   require'lspconfig'.pylsp.setup{
     on_attach = on_attach,
+    capabilities=capabilities,
     settings = {
       pylsp = {
         plugins = {

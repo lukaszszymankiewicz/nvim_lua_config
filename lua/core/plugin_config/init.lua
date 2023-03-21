@@ -1,3 +1,4 @@
+require("core.plugin_config.cmp")
 require("core.plugin_config.treesitter")
 require("core.plugin_config.fzf")
 require("core.plugin_config.lsp_config")
